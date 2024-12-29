@@ -7,11 +7,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ClerkProvider } from '@clerk/clerk-react';
+import Docs from './pages/Docs.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/docs",
+    element: <Docs />,
   },
 ]);
 
