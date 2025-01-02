@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ClerkProvider } from '@clerk/clerk-react';
-import Docs from './pages/Docs.tsx';
+import Docs from './pages/docs/Docs.tsx';
 
 const router = createBrowserRouter([
   {

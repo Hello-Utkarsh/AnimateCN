@@ -1,3 +1,5 @@
+import BtnDocs from "./BtnDocs";
+import Intro from "./Intro";
 import TextDocs from "./TextDocs";
 
 export default function Docs() {
@@ -28,7 +30,9 @@ export default function Docs() {
                     </div>
                 </span>
             </div>
-            <TextDocs />
+            <div className='w-[65%] flex flex-col gap-8'>
+            <BtnDocs />
+            </div>
         </div>
     )
 }
