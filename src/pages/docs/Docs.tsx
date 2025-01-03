@@ -1,6 +1,6 @@
 import BtnDocs from "./BtnDocs";
-import Intro from "./Intro";
-import TextDocs from "./TextDocs";
+// import Intro from "./Intro";
+// import TextDocs from "./TextDocs";
 
 export default function Docs() {
     
