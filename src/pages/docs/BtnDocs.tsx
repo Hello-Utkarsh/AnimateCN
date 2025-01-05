@@ -1,6 +1,7 @@
 import DemoPreview from '../../components/DemoPreview'
 import Ripple from '../../components/BtnAnimations/Ripple'
 import Glow from '../../components/BtnAnimations/Glow'
+import LoadBtn from '../../components/BtnAnimations/LoadBtn'
 
 export default function BtnDocs() {
     return (
@@ -26,6 +27,17 @@ export default function BtnDocs() {
                     <Glow width='100'>Hover Me!</Glow>
                 </DemoPreview>
                 <p className="text-pretty text-lg">You can personalize the glow color using the <span className='bg-gray-700 rounded-md px-1'>glowClr</span> prop and adjust the button's background color with the <span className='bg-gray-700 rounded-md px-1'>bgClr</span> prop to ensure it matches your theme.</p>
+                {/* code */}
+                <p className="text-pretty text-lg">For the text, the <span className='bg-gray-700 rounded-md px-1'>txt</span> prop lets you specify the main button label</p>
+                {/* code */}
+                <p className="text-pretty text-lg">Additionally, you can control the button's size by passing custom values to the <span className='bg-gray-700 rounded-md px-1'>width</span> and <span className='bg-gray-700 rounded-md px-1'>height</span> prop.</p>
+            </span>
+            <span className="flex flex-col gap-3">
+                <h2 className="text-2xl font-semibold">Loading Button</h2>
+                <DemoPreview className='w-[100%] h-[50vh] border border-gray-700 rounded-md divide-y-2 divide-gray-700 items-start justify-start'>
+                    <LoadBtn width='100' progress='66'>Hover Me!</LoadBtn>
+                </DemoPreview>
+                <p className="text-pretty text-lg">You can adjust the button's background color with the <span className='bg-gray-700 rounded-md px-1'>bgClr</span> prop to ensure it matches your theme.</p>
                 {/* code */}
                 <p className="text-pretty text-lg">For the text, the <span className='bg-gray-700 rounded-md px-1'>txt</span> prop lets you specify the main button label</p>
                 {/* code */}
