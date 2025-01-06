@@ -6,7 +6,7 @@ export default function DemoPreview(props: any) {
     const [mode, SelectMode] = useState('preview')
 
     return (
-        <motion.div className={className} style={style}>
+        <motion.div className={className} style={{...style, position: 'relative'}}>
             <span className='w-full flex gap-4 text-xl px-4 h-[15%]'>
                 <button onClick={() => { SelectMode('preview') }}>Preview</button>
                 <button onClick={() => { SelectMode('code') }}>Code</button>
@@ -18,9 +18,9 @@ export default function DemoPreview(props: any) {
                 {children}
             </motion.span>
             <motion.span variants={{
-                hidden: { opacity: 0, height: 0, display: 'none' },
+                hidden: { opacity: 0, height: 0, display: 'none', position: 'static' },
                 visible: { opacity: 1, height: '85%', display: 'block' }
-            }} animate={mode == 'code' ? 'visible' : 'hidden'} initial='hidden' transition={{ duration: 0.5 }} className='flex justify-center items-center text-center'>
+            }} animate={mode == 'code' ? 'visible' : 'hidden'} initial='hidden' transition={{ duration: 0.5, delay: 0.15 }} className='flex justify-center items-center text-center'>
                 {code}
             </motion.span>
         </motion.div >

@@ -12,7 +12,7 @@ export default function Glow(props: any) {
                     borderWidth: 2,
                     borderStyle: "solid",
                     borderColor: glowClr || "#1e9bff",
-                    boxShadow: `0 0 20px ${glowClr || '#1e9bff'}`,
+                    boxShadow: `0 0 20px ${glowClr || '#1e9bff'}, 0 0 80px ${glowClr || '#1e9bff'}`,
                     color: glowTxt || "white"
                 } : { borderColor: bdrClr || "#374151", borderWidth: 2 }}
                 transition={{ duration: 0.2 }}

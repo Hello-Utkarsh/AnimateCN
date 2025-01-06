@@ -9,6 +9,7 @@ function App() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
   const { scrollY } = useScroll()
   const textScrollHeight = useTransform(scrollY, [1000, 1229, 1230], [1, 80, 0])
+  
 
   useEffect(() => {
     const interval = setInterval(() => {

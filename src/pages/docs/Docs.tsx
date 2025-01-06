@@ -2,10 +2,11 @@ import { useState } from "react";
 import BtnDocs from "./BtnDocs";
 import TextDocs from "./TextDocs";
 import Intro from "./Intro";
+import ScrlDocs from "./ScrlDocs";
 
 export default function Docs() {
     const [docs, setDocs] = useState('TextDocs')
-    const allDocs: any = { 'TextDocs': <TextDocs />, 'BtnDocs': <BtnDocs />, 'Intro': <Intro /> }
+    const allDocs: any = { 'TextDocs': <TextDocs />, 'BtnDocs': <BtnDocs />, 'Intro': <Intro />, 'ScrlDocs': <ScrlDocs /> }
 
 
     return (
@@ -28,9 +29,9 @@ export default function Docs() {
                     </div>
                 </span>
                 <span>
-                    <h2 className='text-lg'>Hover Animations</h2>
+                    <h2 onClick={() => setDocs('ScrlDocs')} className='text-lg cursor-pointer'>Scoll Animations</h2>
                     <div className='ml-4 my-2 flex flex-col gap-3'>
-                        <h4 className='text-base'>Typing</h4>
+                        <h4 className='text-base'>Pinning</h4>
                         <h4 className='text-base'>Flip</h4>
                     </div>
                 </span>
