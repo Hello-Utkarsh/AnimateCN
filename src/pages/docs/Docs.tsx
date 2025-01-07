@@ -31,8 +31,8 @@ export default function Docs() {
                 <span>
                     <h2 onClick={() => setDocs('ScrlDocs')} className='text-lg cursor-pointer'>Scoll Animations</h2>
                     <div className='ml-4 my-2 flex flex-col gap-3'>
+                        <h4 className='text-base'>Scale</h4>
                         <h4 className='text-base'>Pinning</h4>
-                        <h4 className='text-base'>Flip</h4>
                     </div>
                 </span>
             </div>

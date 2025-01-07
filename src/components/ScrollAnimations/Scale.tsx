@@ -1,13 +1,13 @@
-import { motion, useMotionValue, useScroll, useTransform } from 'motion/react'
-import { useEffect, useRef } from 'react'
+import { motion, useScroll, useTransform } from 'motion/react'
+import { useRef } from 'react'
 
-export default function Pinning() {
+export default function Scale() {
   const containerRef = useRef<HTMLElement | null>(null);
   const { scrollY } = useScroll({ container: containerRef });
   const dim = useTransform(scrollY, [152, 480], [500, 900]);
 
   return (
-    //@ts-ignore
+    // @ts-ignore
     <div ref={containerRef} className='h-full w-full overflow-y-auto'>
       <h1 className='w-full h-[50vh] flex justify-center items-center'>Scroll Up!</h1>
       <motion.img

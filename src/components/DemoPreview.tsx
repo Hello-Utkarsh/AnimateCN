@@ -6,7 +6,7 @@ export default function DemoPreview(props: any) {
     const [mode, SelectMode] = useState('preview')
 
     return (
-        <motion.div className={className} style={{...style, position: 'relative'}}>
+        <motion.div className={className} style={{...style}}>
             <span className='w-full flex gap-4 text-xl px-4 h-[15%]'>
                 <button onClick={() => { SelectMode('preview') }}>Preview</button>
                 <button onClick={() => { SelectMode('code') }}>Code</button>

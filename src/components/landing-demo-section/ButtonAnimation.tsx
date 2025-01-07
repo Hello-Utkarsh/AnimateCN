@@ -1,5 +1,6 @@
 import { motion, useTransform } from 'motion/react'
 import { useState } from 'react'
+import DemoPreview from '../DemoPreview'
 
 export default function ButtonAnimation(props: any) {
     const { scrollY } = props
@@ -17,24 +18,9 @@ export default function ButtonAnimation(props: any) {
                         <motion.p style={{ display: useTransform(buttonScrollHeight, [0, 1], ['none', 'block']) }} className='mt-1'>Make your buttons stand out with hover, ripple,<br />and bounce animations</motion.p>
                     </span>
                 </motion.span>
-                <motion.span style={{ display: useTransform(buttonScrollHeight, [0, 1, 80], ['none', 'block', 'none']) }} className='w-[60%] h-[50vh] absolute left-[40%] top-4 flex flex-col border border-gray-700 rounded-md divide-y-2 divide-gray-700 items-start justify-start'>
-                    <span className='w-full flex gap-4 text-xl px-4 h-[15%]'>
-                        <button onClick={() => { SelectMode('preview') }}>Preview</button>
-                        <button onClick={() => { SelectMode('code') }}>Code</button>
-                    </span>
-                    <motion.span variants={{
-                        hidden: { opacity: 0, height: 0, display: 'none' },
-                        visible: { opacity: 1, height: '85%', display: 'block' }
-                    }} animate={mode == 'preview' ? 'visible' : 'hidden'} transition={{ duration: 0.3 }} className='flex justify-center items-center text-start px-4 py-2'>
-                        demo
-                    </motion.span>
-                    <motion.span variants={{
-                        hidden: { opacity: 0, height: 0, display: 'none' },
-                        visible: { opacity: 1, height: '85%', display: 'block' }
-                    }} animate={mode == 'code' ? 'visible' : 'hidden'} initial='hidden' transition={{ duration: 0.5 }} className='flex justify-center items-center text-center'>
-                        code
-                    </motion.span>
-                </motion.span>
+                <DemoPreview style={{ display: useTransform(buttonScrollHeight, [0, 1, 80], ['none', 'block', 'none']) }} className='w-[60%] h-[50vh] absolute left-[40%] top-4 flex flex-col border border-gray-700 rounded-md divide-y-2 divide-gray-700 items-start justify-start'>
+                    code
+                </DemoPreview>
             </span>
         </div>
     )
