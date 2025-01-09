@@ -15,8 +15,8 @@ export default function Reveal() {
                 <motion.div
                     animate={{ height: hovered ? '13rem' : 0, padding: hovered ? '40px 8px 16px 8px' : 0 }}
                     onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
-                    className='w-[15rem] text-center text-pretty gap-3 flex flex-col bg-white text-black rounded-lg'>
-                    <h1 className=''>McLaren 675lt</h1>
+                    className='w-[15rem] text-center text-pretty gap-2 flex flex-col bg-white text-black rounded-lg'>
+                    <h1>McLaren 675lt</h1>
                     <p className='text-sm'>a lightweight, track-focused supercar delivering 675PS and exceptional aerodynamics. Its aggressive styling and exhilarating performance redefine speed and precision for enthusiasts.</p>
                 </motion.div>
             </div>

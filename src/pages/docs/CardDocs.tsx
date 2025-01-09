@@ -1,6 +1,7 @@
 import React from 'react'
 import DemoPreview from '../../components/DemoPreview'
 import Reveal from '../../components/CardAnimations/Reveal'
+import Tilt from '../../components/CardAnimations/Tilt'
 
 export default function CardDocs() {
     return (
@@ -21,9 +22,9 @@ export default function CardDocs() {
                 <p className="text-pretty text-lg">Additionally, you can control the button's size by passing custom values to the <span className='bg-gray-700 rounded-md px-1'>width</span> and <span className='bg-gray-700 rounded-md px-1'>height</span> prop.</p>
             </span>
             <span className="flex flex-col gap-3">
-                <h2 className="text-2xl font-semibold">Pinning Effect</h2>
+                <h2 className="text-2xl font-semibold">Tilt Effect</h2>
                 <DemoPreview className='w-[100%] h-[50vh] border border-gray-700 rounded-md divide-y-2 divide-gray-700 items-center justify-center'>
-                    {/* <Pinning /> */}
+                    <Tilt />
                 </DemoPreview>
                 <p className="text-pretty text-lg">You can personalize the ripple's color using the <span className='bg-gray-700 rounded-md px-1'>rippleClr</span> prop and adjust the button's background color with the <span className='bg-gray-700 rounded-md px-1'>bgClr</span> prop to ensure it matches your theme.</p>
                 {/* code */}

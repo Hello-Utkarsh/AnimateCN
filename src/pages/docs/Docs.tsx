@@ -6,7 +6,7 @@ import ScrlDocs from "./ScrlDocs";
 import CardDocs from "./CardDocs";
 
 export default function Docs() {
-    const [docs, setDocs] = useState('TextDocs')
+    const [docs, setDocs] = useState('CardDocs')
     const allDocs: any = { 'TextDocs': <TextDocs />, 'BtnDocs': <BtnDocs />, 'Intro': <Intro />, 'ScrlDocs': <ScrlDocs />, 'CardDocs': <CardDocs /> }
 
 
@@ -39,8 +39,8 @@ export default function Docs() {
                 <span>
                     <h2 onClick={() => setDocs('CardDocs')} className='text-lg cursor-pointer'>Card Animations</h2>
                     <div className='ml-4 my-2 flex flex-col gap-3'>
-                        <h4 className='text-base'>Tilt</h4>
                         <h4 className='text-base'>Reveal</h4>
+                        <h4 className='text-base'>Tilt</h4>
                     </div>
                 </span>
             </div>
