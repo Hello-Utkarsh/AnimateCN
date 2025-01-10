@@ -1,7 +1,7 @@
-import React from 'react'
 import DemoPreview from '../../components/DemoPreview'
 import Reveal from '../../components/CardAnimations/Reveal'
 import Tilt from '../../components/CardAnimations/Tilt'
+import ShadowReveal from '../../components/CardAnimations/ShadowReveal'
 
 export default function CardDocs() {
     return (
@@ -13,7 +13,24 @@ export default function CardDocs() {
             <span className="flex flex-col gap-3">
                 <h2 className="text-2xl font-semibold">Reveal Effect</h2>
                 <DemoPreview className='w-[100%] h-[50vh] border border-gray-700 rounded-md divide-y-2 divide-gray-700 items-center justify-center'>
-                    <Reveal />
+                    <Reveal
+                        img="https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        title="McLaren 675lt"
+                        desc="a lightweight, track-focused supercar delivering 675PS and exceptional aerodynamics. Its aggressive styling and exhilarating performance redefine speed and precision for enthusiasts."
+                    />
+                </DemoPreview>
+                <p className="text-pretty text-lg">Adjust the card's background with the <span className='bg-gray-700 rounded-md px-1'>bgClr</span> prop and the text color with the <span className='bg-gray-700 rounded-md px-1'>txtClr</span> prop</p>
+                {/* code */}
+                <p className="text-pretty text-lg">For the content, provide an image with the<span className='bg-gray-700 rounded-md px-1'>img</span>prop, a bold title using the <span className='bg-gray-700 rounded-md px-1'>title</span> prop, and a detailed description with the <span className='bg-gray-700 rounded-md px-1'>desc</span> prop</p>
+                {/* code */}
+            </span>
+            <span className="flex flex-col gap-3">
+                <h2 className="text-2xl font-semibold">Tilt Effect</h2>
+                <DemoPreview className='w-[100%] h-[50vh] border border-gray-700 rounded-md divide-y-2 divide-gray-700 items-center justify-center'>
+                    <Tilt
+                        title="McLaren 675lt"
+                        desc="A lightweight, track-focused supercar delivering 675PS and exceptional aerodynamics. Its aggressive styling and exhilarating performance redefine speed and precision for enthusiasts."
+                    />
                 </DemoPreview>
                 <p className="text-pretty text-lg">You can personalize the ripple's color using the <span className='bg-gray-700 rounded-md px-1'>rippleClr</span> prop and adjust the button's background color with the <span className='bg-gray-700 rounded-md px-1'>bgClr</span> prop to ensure it matches your theme.</p>
                 {/* code */}
@@ -24,7 +41,13 @@ export default function CardDocs() {
             <span className="flex flex-col gap-3">
                 <h2 className="text-2xl font-semibold">Tilt Effect</h2>
                 <DemoPreview className='w-[100%] h-[50vh] border border-gray-700 rounded-md divide-y-2 divide-gray-700 items-center justify-center'>
-                    <Tilt />
+                    <div className='w-[30%] h-full py-4 flex justify-center items-center mx-auto'>
+                        <ShadowReveal
+                            img="https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            title="McLaren 675lt"
+                            desc="A lightweight, track-focused supercar delivering 675PS and exceptional aerodynamics. Its aggressive styling and exhilarating performance redefine speed and precision for enthusiasts."
+                        />
+                    </div>
                 </DemoPreview>
                 <p className="text-pretty text-lg">You can personalize the ripple's color using the <span className='bg-gray-700 rounded-md px-1'>rippleClr</span> prop and adjust the button's background color with the <span className='bg-gray-700 rounded-md px-1'>bgClr</span> prop to ensure it matches your theme.</p>
                 {/* code */}

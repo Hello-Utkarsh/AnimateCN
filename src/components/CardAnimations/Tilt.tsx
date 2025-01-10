@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import React from "react";
 
-const Tilt = () => {
+const Tilt = (props: any) => {
+    const { title, desc, bgClr } = props
     const x = useMotionValue(150);
     const y = useMotionValue(150);
 
@@ -29,19 +29,21 @@ const Tilt = () => {
             onMouseLeave={() => { x.set(150), y.set(150) }}
         >
             <motion.div
-                className="w-full h-full rounded-lg flex items-center justify-center bg-slate-700"
+                className="w-full h-full rounded-lg flex flex-col items-center justify-center gap-4 text-center px-4 bg-slate-700"
                 style={{
                     rotateX,
                     rotateY,
                     skewX,
-                    skewY
+                    skewY,
+                    backgroundColor: bgClr || "#334155"
                 }}
                 transition={{
                     type: "spring",
                     stiffness: 400,
                 }}
             >
-                <h1 className="text-white font-bold">Move Mouse</h1>
+                <h1 className="text-lg font-medium">{title}</h1>
+                <p className='text-sm'>{desc}</p>
             </motion.div>
         </motion.div>
     );
