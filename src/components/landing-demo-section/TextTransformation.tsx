@@ -28,7 +28,7 @@ export default function TextTransformation(props: any) {
                         className='w-1 rounded-md bg-red-600 absolute top-[0px]' />
                     <span>
                         <motion.h2
-                            style={{ top: useTransform(textScrollHeight, [79, 80], [0, 20]), lineHeight: useTransform(textScrollHeight, [79, 80], [1.5, 0]), color: useTransform(textScrollHeight, [0, 1], ["#9ca3af", "white"]) }}
+                            style={{ top: useTransform(textScrollHeight, [79, 80], [0, 20]), lineHeight: useTransform(textScrollHeight, [79, 80], [1.5, 0]), color: useTransform(textScrollHeight, [0, 1], ["#9ca3af", "#ffffff"]) }}
                             className='text-2xl leading-10 font-medium'>Text Transformations</motion.h2>
                         <motion.p
                             style={{ display: useTransform(textScrollHeight, [0, 1, 79, 80], ['none', 'block', 'block', 'none']) }}

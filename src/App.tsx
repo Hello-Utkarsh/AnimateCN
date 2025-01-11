@@ -1,15 +1,15 @@
 import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react'
 import { useEffect, useState } from 'react';
 import TextTransformation from './components/landing-demo-section/TextTransformation';
-import HoverAnimations from './components/landing-demo-section/HoverAnimations';
 import ButtonAnimation from './components/landing-demo-section/ButtonAnimation';
 import Button from './components/Button';
+import CardAnimations from './components/landing-demo-section/CardAnimations';
 
 function App() {
   const words = ['Effortlessly', 'Anything     ', 'Seamlessly   ']
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
   const { scrollY } = useScroll()
-  const textScrollHeight = useTransform(scrollY, [1000, 1229, 1230], [1, 80, 0])
+  const textScrollHeight = useTransform(scrollY, [1000, 1429, 1430], [1, 80, 0])
 
 
   useEffect(() => {
@@ -57,11 +57,11 @@ function App() {
         <div className='flex text-white items-center w-fit gap-3'>
           <Button>Discover a variety of animations<br />you can easily implement with AnimateCN</Button>
         </div>
-        <div className='py-16 h-[100rem] relative'>
+        <div className='py-16 h-[121rem] relative'>
           <motion.div className='relative w-[85vw] mx-auto' style={textScrollHeight ? { position: 'sticky', top: 80 } : { position: 'static' }}>
             <TextTransformation textScrollHeight={textScrollHeight} />
             <ButtonAnimation scrollY={scrollY} />
-            <HoverAnimations scrollY={scrollY} />
+            <CardAnimations scrollY={scrollY} />
           </motion.div>
         </div>
       </div>

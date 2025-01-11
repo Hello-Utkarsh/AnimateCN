@@ -7,7 +7,7 @@ export default function Ripple(props: any) {
 
     return (
         <div
-            className='relative rounded-md flex items-center border-0 justify-center overflow-hidden'
+            className='relative rounded-md flex items-center border-0 justify-center overflow-hidden mx-auto'
             style={{ backgroundColor: bgClr || 'white', width: Number(width) || 80, height: Number(height) || 40 }} onMouseEnter={() => { setHover(true) }}
             onMouseOut={() => setHover(false)}>
             <motion.button

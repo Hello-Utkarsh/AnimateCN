@@ -23,10 +23,10 @@ export default function Pinning() {
                     src="https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className='w-[45%] h-fit left-[53%] mt-2 absolute' alt="" />
 
             </div>
-            <div className='w-full h-fit flex justify-between relative mt-4' >
+            <div className='w-full h-fit flex justify-between relative mt-8' >
                 <motion.img
                     // keep the difference between the values of first array and second array equal so that the absolute content does not move
-                    style={{ top: useTransform(scrollY, [530, 760], [0, 230]) }}
+                    style={{ top: useTransform(scrollY, [545, 775], [0, 230]) }}
                     src="https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className='w-[45%] h-fit absolute mt-4' alt="" />
                 <div className='w-5/12 ml-[50%]'>
                     <h1>Lorem, ipsum.</h1>

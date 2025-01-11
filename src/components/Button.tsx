@@ -10,13 +10,12 @@ export default function Button(props: any) {
     useEffect(() => {
         const changeBtn = setTimeout(() => {
             setTimer((prev) => !prev)
-        }, 5000);
+        }, 5500);
         return () => { clearTimeout(changeBtn) }
     }, [timer])
     return (
         <motion.div
             animate={timer ? { width: '18rem', borderRadius: 12, height: '5rem', borderWidth: '2px', marginLeft: 60 } : { width: '28rem', borderWidth: '3px' }}
-            // exit={{width: '28rem', borderWidth: '3px'}}
             transition={{ duration: 0.6 }}
             onMouseEnter={() => setTimer(true)}
             className='w-[28rem] h-[5rem] border-white flex flex-col justify-center items-center relative'>
