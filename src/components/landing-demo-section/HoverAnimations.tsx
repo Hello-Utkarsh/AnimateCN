@@ -1,11 +1,9 @@
 import { motion, useTransform } from 'motion/react'
-import { useState } from 'react'
 import DemoPreview from '../DemoPreview'
 
 export default function HoverAnimations(props: any) {
     const { scrollY } = props
     const hoverScrollHeight = useTransform(scrollY, [1460, 1689, 1690], [0, 80, 0])
-    const [mode, SelectMode] = useState('preview')
 
     return (
         <div>

@@ -1,7 +1,7 @@
 import { useScroll, useTransform, motion } from 'motion/react'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 
-export default function Pinning(props: any) {
+export default function Pinning() {
     const containerRef = useRef<HTMLElement | null>(null);
     const { scrollY } = useScroll({ container: containerRef })
 

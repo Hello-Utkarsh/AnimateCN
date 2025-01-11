@@ -1,4 +1,3 @@
-import React from 'react'
 import DemoPreview from '../../components/DemoPreview'
 import Scale from '../../components/ScrollAnimations/Scale'
 import Pinning from '../../components/ScrollAnimations/Pinning'

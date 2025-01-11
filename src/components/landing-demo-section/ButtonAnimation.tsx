@@ -1,11 +1,9 @@
 import { motion, useTransform } from 'motion/react'
-import { useState } from 'react'
 import DemoPreview from '../DemoPreview'
 
 export default function ButtonAnimation(props: any) {
     const { scrollY } = props
     const buttonScrollHeight = useTransform(scrollY, [1230, 1459, 1460], [0, 80, 0])
-    const [mode, SelectMode] = useState('preview')
 
     return (
         <div>

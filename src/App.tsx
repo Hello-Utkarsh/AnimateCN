@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react';
 import TextTransformation from './components/landing-demo-section/TextTransformation';
 import HoverAnimations from './components/landing-demo-section/HoverAnimations';
 import ButtonAnimation from './components/landing-demo-section/ButtonAnimation';
+import Button from './components/Button';
 
 function App() {
   const words = ['Effortlessly', 'Anything     ', 'Seamlessly   ']
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
   const { scrollY } = useScroll()
   const textScrollHeight = useTransform(scrollY, [1000, 1229, 1230], [1, 80, 0])
-  
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div className="px-6 py-2 bg-black">
-      <div className="px-20 h-screen flex flex-col justify-center">
+      <div className="px-20 h-screen flex flex-col justify-center relative">
         <span className="relative">
           <motion.svg variants={{
             hidden: { y: -180 },
@@ -49,16 +50,12 @@ function App() {
         </span>
       </div>
       <div className='flex text-white items-center w-fit gap-3'>
-        <span className='text-7xl font-light'>[</span>
-        <span className='text-xl text-pretty text-start w-fit mt-5'>AnimateCN: Effortlessly integrate beautiful<br />animations into your web projects</span>
-        <span className='text-7xl font-light'>]</span>
+        <Button>AnimateCN: Effortlessly integrate beautiful<br />animations into your web projects</Button>
       </div>
       <div className='h-[1px] w-full bg-slate-800 my-24' />
       <div className='text-amber-50'>
         <div className='flex text-white items-center w-fit gap-3'>
-          <span className='text-7xl font-light'>[</span>
-          <span className='text-lg text-pretty text-start w-fit mt-5'>Discover a variety of animations<br />you can easily implement with AnimateCN</span>
-          <span className='text-7xl font-light'>]</span>
+          <Button>Discover a variety of animations<br />you can easily implement with AnimateCN</Button>
         </div>
         <div className='py-16 h-[100rem] relative'>
           <motion.div className='relative w-[85vw] mx-auto' style={textScrollHeight ? { position: 'sticky', top: 80 } : { position: 'static' }}>
